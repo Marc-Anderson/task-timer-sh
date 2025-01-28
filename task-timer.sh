@@ -140,6 +140,7 @@ cleanup() {
     echo "" > "$statisticsFile"
     writeStatistics 
 
+    sync
     # additional commands to execute before exit
 }
 
@@ -246,7 +247,7 @@ logActivityEpochTime() {
     local formattedStartTime="$(date -r "$startEpochTime" "+%Y-%m-%d %H:%M:%S")"
     local formattedStopTime="$(date -r "$stopEpochTime" "+%Y-%m-%d %H:%M:%S")"
 
-    echo "$formattedStartTime - $formattedStopTime($formattedDuration): $appName" >> "$activityLogFile"
+    echo "$formattedStartTime - $formattedStopTime: $appName($formattedDuration)" >> "$activityLogFile"
 }
 
 
