@@ -1,3 +1,6 @@
 logs/*
-!logs/*.example
+!logs/*.example*
 _notes
+start_tracker.command
+.venv
+__pycache__/

@@ -1,0 +1,14 @@
+Microsoft Excel:8363
+Idle:6512
+Microsoft Edge:5980
+Visual Studio Code:5564
+Microsoft Outlook:5416
+Safari:1093
+Finder:1079
+Messages:472
+Keyboard Maestro Engine:108
+TextEdit:19
+loginwindow:14
+NotificationCenter:2
+Obsidian:1
+Terminal:1

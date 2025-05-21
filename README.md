@@ -8,6 +8,7 @@ a zsh only utility for recording a timeline of the active application and how lo
 - logs application names only, does not track window titles
 - no external resources, all files are saved locally in the `logs` folder
 - terminal window must remain open to continue logging
+- if you dont plan to use the python visualizer, just delete it
 
 
 ## what does it do
@@ -27,6 +28,9 @@ a zsh only utility for recording a timeline of the active application and how lo
 9. exit the application with `control+c`
 10. script writes to both files one last time on exit
 
+### running the optional python visualizer
+
+when the application is run with the python visualizer, it will automatically generate a plot with a timeline when closing and save to the logs directory
 
 ## why does this exist
 
@@ -40,6 +44,8 @@ in the age of excessive telemetry and advertising, i dont trust anyone but i wan
 
 
 ## how is it used
+
+### just the shell script
 
 i usually do this in a seperate tab in the terminal app, not vscode since the session needs to remain open for it to continue logging
 
@@ -64,3 +70,36 @@ chmod +x ./task-timer.sh
 ```
 
 5. keep the terminal window open while you do work and the results will be saved in each file
+
+
+### shell script and optional python visualizer
+
+1. clone the repo
+```sh
+git clone git@github.com:Marc-Anderson/task-timer-sh.git
+```
+
+2. cd into the folder
+```sh
+cd task-timer-sh
+```
+
+3. make the `task-timer.sh` executable
+```sh
+chmod +x ./task-timer.sh
+```
+
+4. install matplotlib
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install matplotlib
+```
+
+4. start `task-timer_sh.py`
+```sh
+python3 task_timer_sh.py
+```
+
+5. keep the terminal window open while you do work and the results will be saved in each file
+    - a visualization will be saved in the logs directory when you close 

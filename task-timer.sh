@@ -54,7 +54,7 @@ loadStatistics() {
 
     index=0
     # read each line in the file using : as a separator
-    echo "loading app data:"
+    # echo "loading app data:"
 
     while IFS=':' read -r appName activeTime; do
         # # debug: print the values during processing
@@ -65,7 +65,7 @@ loadStatistics() {
         # 
         index=$((index + 1))
     done < "$statisticsFile"
-
+    echo "app data loaded..."
     # # debug: print the values after processing
     # echo "<START-debugging>"
     # loop_index=0
